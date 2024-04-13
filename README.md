@@ -7,11 +7,14 @@ The bike-sharing company, equipped with extensive historical ride data, aims to 
 ## Problem:
 The bike-sharing company faces challenges in efficiently managing its fleet, stations, and user experience. These challenges include:
 
-### Demand Forecasting: Predicting ride demand across different time periods, stations, and user demographics to allocate resources effectively and anticipate potential service disruptions.
+### Demand Forecasting:
+Predicting ride demand across different time periods, stations, and user demographics to allocate resources effectively and anticipate potential service disruptions.
 
-### User Behavior Analysis: Understanding user preferences, ride patterns, and factors influencing ridership to tailor marketing strategies, station placement, and pricing models.
+### User Behavior Analysis: 
+Understanding user preferences, ride patterns, and factors influencing ridership to tailor marketing strategies, station placement, and pricing models.
 
-### Operational Efficiency: Identifying inefficiencies in bike distribution, station maintenance, and service availability to optimize fleet management and reduce operational costs.
+### Operational Efficiency: 
+Identifying inefficiencies in bike distribution, station maintenance, and service availability to optimize fleet management and reduce operational costs.
 
 ## Proposed Solution:
 Develop a data engineering pipeline that encompasses the following components:
