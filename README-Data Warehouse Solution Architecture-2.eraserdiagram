@@ -20,14 +20,14 @@ Batch Processing {
   DBT SQL [icon: dbt]
 }
 Dashboard {
-  Data Studio [icon: gcp-data-studio]
+  Looker Studio [icon: gcp-data-studio]
 }
 Docker Container
 
 // Define connections where none are between a parent group and its own child node
 Kaggle API > BigQuery
 BigQuery > DBT SQL
-DBT SQL > Data Studio
+DBT SQL > Looker Studio
 Docker Container > Source Data
 Docker Container > Infrastructure
 Docker Container > Workflow Orchestration
