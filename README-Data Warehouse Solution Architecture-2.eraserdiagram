@@ -1,0 +1,37 @@
+cloud-architecture-diagram
+
+
+title Data Warehouse Solution Architecture
+
+// Define groups and nodes
+Source Data {
+  Kaggle API [icon: gcp-kaggle]
+}
+Infrastructure {
+  Terraform [icon: terraform]
+}
+Workflow Orchestration {
+  Mage AI [icon: gcp-mage]
+}
+Data Warehouse {
+  BigQuery [icon: gcp-bigquery]
+}
+Batch Processing {
+  DBT SQL [icon: dbt]
+}
+Dashboard {
+  Data Studio [icon: gcp-data-studio]
+}
+Docker Container
+
+// Define connections where none are between a parent group and its own child node
+Kaggle API > BigQuery
+BigQuery > DBT SQL
+DBT SQL > Data Studio
+Docker Container > Source Data
+Docker Container > Infrastructure
+Docker Container > Workflow Orchestration
+Docker Container > Data Warehouse
+Docker Container > Batch Processing
+Docker Container > Dashboard
+

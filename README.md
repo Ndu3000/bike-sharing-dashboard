@@ -51,6 +51,7 @@ The developed dashboard will empower stakeholders, including operations managers
 ## Diagrams
 <!-- eraser-additional-files -->
 <a href="/README-Rides Data Model-1.eraserdiagram" data-element-id="g1hSsS9Vcc_C8tmEawhkX"><img src="/.eraser/GfKGAlQJF4hlHKT0Xz81___5kM4ZM4iKkdtYlmhik2Qk756wmk1___---diagram----3681a4f2b5eb0abfe819062b607c26be-Rides-Data-Model.png" alt="" data-element-id="g1hSsS9Vcc_C8tmEawhkX" /></a>
+<a href="/README-Data Warehouse Solution Architecture-2.eraserdiagram" data-element-id="9Mo2hXGyAqJTzMjwkOyWt"><img src="/.eraser/GfKGAlQJF4hlHKT0Xz81___5kM4ZM4iKkdtYlmhik2Qk756wmk1___---diagram----f8aca47ee3d185ecc5d3708c0e7bbb64-Data-Warehouse-Solution-Architecture.png" alt="" data-element-id="9Mo2hXGyAqJTzMjwkOyWt" /></a>
 <!-- end-eraser-additional-files -->
 <!-- end-eraser-additional-content -->
 <!--- Eraser file: https://app.eraser.io/workspace/GfKGAlQJF4hlHKT0Xz81 --->
