@@ -1,0 +1,3 @@
+[submodule "terraform-dev"]
+	path = terraform-dev
+	url = https://github.com/Ndu3000/mage-ai-terraform-templates.git
