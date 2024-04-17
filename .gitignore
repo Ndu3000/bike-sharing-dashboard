@@ -154,7 +154,7 @@ docker-compose.override.yml
 *.db
 
 # Terraform files
-**/.terraform*
+# **/.terraform*
 *.tfstate*
 *.zip
 
