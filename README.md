@@ -13,7 +13,7 @@ Predicting ride demand across different time periods, stations, and user demogra
 ### User Behavior Analysis:
 Understanding user preferences, ride patterns, and factors influencing ridership to tailor marketing strategies, station placement, and pricing models.
 
-    ### Operational Efficiency:
+### Operational Efficiency:
 Identifying inefficiencies in bike distribution, station maintenance, and service availability to optimize fleet management and reduce operational costs.
 
 ## Proposed Solution:
@@ -50,7 +50,7 @@ The developed dashboard will empower stakeholders, including operations managers
 <!-- eraser-additional-content -->
 ## Diagrams
 <!-- eraser-additional-files -->
-<a href="/README-Data Warehouse Solution Architecture-1.eraserdiagram" data-element-id="9Mo2hXGyAqJTzMjwkOyWt"><img src="/.eraser/GfKGAlQJF4hlHKT0Xz81___5kM4ZM4iKkdtYlmhik2Qk756wmk1___---diagram----95df086dbf3bdf0799259eb0f3c73b5b-Data-Warehouse-Solution-Architecture.png" alt=                                    "" data-element-id="9Mo2hXGyAqJTzMjwkOyWt" /></a>
+<a href="/README-Data Warehouse Solution Architecture-1.eraserdiagram" data-element-id="9Mo2hXGyAqJTzMjwkOyWt"><img src="/.eraser/GfKGAlQJF4hlHKT0Xz81___5kM4ZM4iKkdtYlmhik2Qk756wmk1___---diagram----95df086dbf3bdf0799259eb0f3c73b5b-Data-Warehouse-Solution-Architecture.png" alt="" data-element-id="9Mo2hXGyAqJTzMjwkOyWt" /></a>
 <a href="/README-Rides Data Model-2.eraserdiagram" data-element-id="g1hSsS9Vcc_C8tmEawhkX"><img src="/.eraser/GfKGAlQJF4hlHKT0Xz81___5kM4ZM4iKkdtYlmhik2Qk756wmk1___---diagram----3681a4f2b5eb0abfe819062b607c26be-Rides-Data-Model.png" alt="" data-element-id="g1hSsS9Vcc_C8tmEawhkX" /></a>
 <!-- end-eraser-additional-files -->
 <!-- end-eraser-additional-content -->
