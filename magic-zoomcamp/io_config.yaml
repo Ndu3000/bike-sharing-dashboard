@@ -59,7 +59,7 @@ default:
 #     token_uri: "https://oauth2.googleapis.com/token"
 #     auth_provider_x509_cert_url: "https://www.googleapis.com/oauth2/v1/certs"
 #     client_x509_cert_url: "https://www.googleapis.com/robot/v1/metadata/x509/mage-zoomcamp%40mage-project-74715.iam.gserviceaccount.com"
-  GOOGLE_SERVICE_ACC_KEY_FILEPATH: "/home/src/mage-project-74715-3584748e4a25.json"
+  GOOGLE_SERVICE_ACC_KEY_FILEPATH: "/home/src/mage-project-74715-de478ca4a125.json"
   # GOOGLE_LOCATION: US # Optional
   # MongoDB
   # Specify either the connection string or the (host, password, user, port) to connect to MongoDB.
