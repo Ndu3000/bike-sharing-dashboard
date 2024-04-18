@@ -1,0 +1,4 @@
+packages:
+  - local: ./project1
+  - local: ./project2
+

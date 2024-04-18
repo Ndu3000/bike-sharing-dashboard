@@ -1,0 +1,3 @@
+{"operation": "create", "resource": {"type": "pipeline", "uuid": "impressive_wizard"}, "timestamp": 1707446352, "user": null}
+{"operation": "create", "resource": {"type": "pipeline", "uuid": "legendary_sunrise"}, "timestamp": 1707446711, "user": null}
+{"operation": "create", "resource": {"type": "pipeline", "uuid": "ny_taxi_data_copy"}, "timestamp": 1707449103, "user": null}
