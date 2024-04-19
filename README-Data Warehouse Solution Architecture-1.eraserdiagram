@@ -5,13 +5,15 @@ title Data Warehouse Solution Architecture
 
 // Define groups and nodes
 Source Data {
-  Kaggle API [icon: excel]
+  API [icon: api]
 }
 Infrastructure {
   Terraform [icon: terraform]
 }
 Workflow Orchestration {
   Mage AI [icon: gcp-batch]
+  Python [icon: python]
+  Github [icon: github]
 }
 Data Warehouse {
   BigQuery [icon: gcp-bigquery]
@@ -27,7 +29,7 @@ Docker Container {
 }
 
 // Define connections where none are between a parent group and its own child node
-Kaggle API > BigQuery
+API > BigQuery
 BigQuery > DBT SQL
 DBT SQL > Looker Studio
 Docker Container > Source Data
