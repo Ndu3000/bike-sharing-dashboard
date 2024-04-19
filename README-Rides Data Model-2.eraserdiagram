@@ -31,6 +31,7 @@ end_station_dimension [icon: map-pin]{
   end_station_name string
   end_lat number
   end_lng number
+  trip_duration int
 }
 
 rideable_type_dimension [icon: bicycle]{
