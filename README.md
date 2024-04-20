@@ -36,7 +36,7 @@ Utilize a Business Intelligence (BI) tool such as Looker Studio to design an int
 
 - A graph showing the distribution of ride types (e.g., subscriber vs. customer) to understand user demographics and preferences.
 - A temporal line graph illustrating ride frequency over time, allowing stakeholders to visualize trends and seasonality in ridership.
-    - Access the dashboard example [﻿here](https://lookerstudio.google.com/reporting/708e47ae-5213-45dd-913a-c3e2b343ec58)﻿if the Looker Studio link is still active otherwise view it [here](https://github.com/Ndu3000/bike-sharing-dashboard/blob/main/visuals/images/dashboard.JPG). Note that a subset of the data has been queried for cost reasons so this is not indicative of real-world results but is only to demonstrate the technology capability to solve a business requirement.
+    - Access the dashboard example [﻿here](https://lookerstudio.google.com/reporting/708e47ae-5213-45dd-913a-c3e2b343ec58) ﻿if the Looker Studio link is still active otherwise view it [here](https://github.com/Ndu3000/bike-sharing-dashboard/blob/main/visuals/images/dashboard.JPG). Note that a subset of the data has been queried for cost reasons so this is not indicative of real-world results but is only to demonstrate the technology capability to solve a business requirement.
 ### Technology Stack:
 - Cloud: Google Cloud Platform (GCP)
 - Infrastructure as Code (IaC): Terraform
