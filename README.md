@@ -47,6 +47,75 @@ Utilize a Business Intelligence (BI) tool such as Data Studio to design an inter
 The developed dashboard will empower stakeholders, including operations managers, marketing teams, and city planners, to make data-driven decisions to optimize bike-sharing operations, enhance user experience, and drive business growth.
 
 
+
+## Instructions:
+
+
+### Setting up Mage AI on Google Cloud Platform (GCP) using Terraform:
+1. **Install Terraform:**
+    - Download and install Terraform from Terraform's official website.
+2. **Clone the Repository:**
+3. **Navigate to Terraform Directory:**
+4. **Set up Terraform Configuration:**
+    - Update the `**terraform.tfvars**`  file with your desired configuration parameters.
+5. **Initialize Terraform:**
+    - Run `**terraform init**`  to initialize the Terraform configuration.
+6. **Review Terraform Plan:**
+    - Run `**terraform plan**`  to review the execution plan and ensure it matches your expectations.
+7. **Apply Terraform Changes:**
+    - Run `**terraform apply**`  to apply the Terraform configuration changes and provision the resources on GCP.
+**Terraform: Resources**
+
+- [﻿Installing Terraform](https://developer.hashicorp.com/terraform/tutorials/aws-get-started/install-cli) 
+- [﻿Installing gcloud CLI](https://cloud.google.com/sdk/docs/install) 
+- [﻿Mage Terraform Templates](https://github.com/mage-ai/mage-ai-terraform-templates) 
+Additional Mage Guides
+
+- [﻿Terraform](https://docs.mage.ai/production/deploying-to-cloud/using-terraform) 
+- [﻿Deploying to GCP with Terraform](https://docs.mage.ai/production/deploying-to-cloud/gcp/setup) 
+
+
+### **Set up Google Big Query:**
+1. Set up Google BigQuery and partition the raw schema table by month which means that in DBT you will have to consider the partitioning in the dbt model for the staging table.
+### Configuring Mage AI Environment:
+1. **Access Mage AI Console:**
+    - Once the Terraform setup is complete, access the Mage AI console using the provided URL.
+2. **Authenticate and Set Up Project:**
+    - Follow the on-screen instructions to authenticate and set up your project in the Mage AI console.
+3. **Versioning**:
+    - Set up GitHub versioning on the top right settings button to sync the GCP Mage instance with local development.
+### Setting up Raw Pipeline in Mage AI:
+1. **Access Data Pipeline Section:**
+    - Navigate to the Data Pipeline section in the Mage AI console.
+2. **Create a New Pipeline:**
+    - Create a new pipeline and name it appropriately (e.g., "Chicago Data Raw Pipeline"). Here is the API endpoint:
+[﻿data.cityofchicago.org/resource/fg6s-gzvg.json](https://data.cityofchicago.org/resource/fg6s-gzvg.json) 
+3. **Set up Data Source:**
+    - Configure a data loader first in the pipeline to fetch data from the City of Chicago API mentioned above.
+4. **Define Transformation Rules:**
+    - Then define any necessary transformation rules or filters to process the raw data from the API.
+5. **Schedule Pipeline Execution:**
+    - Then set up a schedule for the pipeline to execute periodically to fetch updated data from the API.
+6. **Run Pipeline and set up trigger schedule:**
+    - Execute the pipeline to fetch data from the City of Chicago API and store it Google Big Query.
+### Setting up DBT Staging Pipeline in Mage AI:
+1. **Access DBT Environment:**
+    - Navigate to the DBT section in the Mage AI console.
+2. **Create DBT Project:**
+    - Create a new DBT project within Mage AI.
+3. **Define DBT Configuration:**
+    - Define your DBT project configuration, including connections to your data sources and targets.
+4. **Create DBT Models:**
+    - Define your DBT models within the Mage AI environment, either by writing SQL or using DBT's modeling capabilities.
+5. **Run DBT Jobs:**
+    - Run DBT jobs to execute your defined models and populate your target data warehouse.
+6. **Verify Results:**
+    - Verify the results of your DBT jobs to ensure that your models are functioning as expected and that data is correctly transformed and loaded into your target data warehouse.
+By following these steps, you should be able to set up a raw pipeline in Mage AI to fetch data from the City of Chicago API and then set up a DBT staging pipeline to transform and load the data into your target data warehouse. Ensure to replace placeholders with actual values and customize the setup according to your specific requirements and environment.
+
+
+
+
 <!-- eraser-additional-content -->
 ## Diagrams
 <!-- eraser-additional-files -->
