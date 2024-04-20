@@ -77,6 +77,7 @@ Additional Mage Guides
 
 ### **Set up Google Big Query:**
 1. Set up Google BigQuery and partition the raw schema table by month which means that in DBT you will have to consider the partitioning in the dbt model for the staging table.
+   ![image](https://github.com/Ndu3000/bike-sharing-dashboard/assets/9050323/f865328d-2a3b-418d-a357-74e6cd577876)
 ### Configuring Mage AI Environment:
 1. **Access Mage AI Console:**
     - Once the Terraform setup is complete, access the Mage AI console using the provided URL.
@@ -102,7 +103,8 @@ Additional Mage Guides
 1. **Access DBT Environment:**
     - Navigate to the DBT section in the Mage AI console.
 2. **Create DBT Project:**
-    - Create a new DBT project within Mage AI.
+    - Create a new DBT project within Mage AI. The initial set up of the DBT project structure in Mage should look like this.
+![image](https://github.com/Ndu3000/bike-sharing-dashboard/assets/9050323/4976737e-7938-45f6-ad13-cd870a531a40)
 3. **Define DBT Configuration:**
     - Define your DBT project configuration, including connections to your data sources and targets.
 4. **Create DBT Models:**
@@ -111,6 +113,8 @@ Additional Mage Guides
     - Run DBT jobs to execute your defined models and populate your target data warehouse.
 6. **Verify Results:**
     - Verify the results of your DBT jobs to ensure that your models are functioning as expected and that data is correctly transformed and loaded into your target data warehouse.
+  
+
 By following these steps, you should be able to set up a raw pipeline in Mage AI to fetch data from the City of Chicago API and then set up a DBT staging pipeline to transform and load the data into your target data warehouse. Ensure to replace placeholders with actual values and customize the setup according to your specific requirements and environment.
 
 
