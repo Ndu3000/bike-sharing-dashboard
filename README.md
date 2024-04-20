@@ -78,6 +78,7 @@ Additional Mage Guides
 ### **Set up Google Big Query:**
 1. Set up Google BigQuery and partition the raw schema table by month which means that in DBT you will have to consider the partitioning in the dbt model for the staging table.
    ![image](https://github.com/Ndu3000/bike-sharing-dashboard/assets/9050323/f865328d-2a3b-418d-a357-74e6cd577876)
+2. The final data warehouse should look like the data model diagram at the bottom of this README file after setting up a single normal form normalised star schema for our data warehouse as this data is not too complex. The normalisation and partitioning is still required for the efficient querying of this large data set of daily bike rides since the year 2013 (over 2 million records).
 ### Configuring Mage AI Environment:
 1. **Access Mage AI Console:**
     - Once the Terraform setup is complete, access the Mage AI console using the provided URL.
