@@ -60,7 +60,7 @@ The developed dashboard will empower stakeholders, including operations managers
 6. **Review Terraform Plan:**
     - Run `terraform plan`  to review the execution plan and ensure it matches your expectations. This is made easy by writing the `.out` cloud environment file e.g `terraform plan --out="tf_plan.out"`and running `terraform apply`  based on this cloud environment file.
 7. **Apply Terraform Changes:**
-    - Run `terraform apply`  to apply the Terraform configuration changes and provision the resources on GCP. So based on the above you will run it like this - `terraform apply ``tf_plan.out`.
+    - Run `terraform apply`  to apply the Terraform configuration changes and provision the resources on GCP. So based on the above you will run it like this - `terraform apply tf_plan.out`.
 8. **Terraform: Resources**
 - [﻿Installing Terraform](https://developer.hashicorp.com/terraform/tutorials/aws-get-started/install-cli)  
 - [﻿Installing gcloud CLI](https://cloud.google.com/sdk/docs/install)  
