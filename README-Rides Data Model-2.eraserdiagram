@@ -49,5 +49,3 @@ rides_fact.ended_at_id > date_dimension.date_id
 rides_fact.start_station_id > start_station_dimension.start_station_id
 rides_fact.end_station_id > end_station_dimension.end_station_id
 rides_fact.rider_type_id > rideable_type_dimension.rider_type_id
-
-

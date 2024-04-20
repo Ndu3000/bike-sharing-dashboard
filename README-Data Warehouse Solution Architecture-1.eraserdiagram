@@ -1,6 +1,5 @@
 cloud-architecture-diagram
 
-
 title Data Warehouse Solution Architecture
 
 // Define groups and nodes
@@ -38,4 +37,3 @@ Docker Container > Workflow Orchestration
 Docker Container > Data Warehouse
 Docker Container > Batch Processing
 Docker Container > Dashboard
-

@@ -32,10 +32,11 @@ Utilize Mage AI for workflow orchestration to automate the data pipeline, ensuri
 Employ SQL queries within DBT to perform exploratory data analysis (EDA) and generate insights on ride demand, user behavior, and operational efficiency.
 
 ### Dashboard Creation:
-Utilize a Business Intelligence (BI) tool such as Data Studio to design an interactive dashboard. The dashboard will include:
+Utilize a Business Intelligence (BI) tool such as Looker Studio to design an interactive dashboard. The dashboard will include:
 
 - A graph showing the distribution of ride types (e.g., subscriber vs. customer) to understand user demographics and preferences.
 - A temporal line graph illustrating ride frequency over time, allowing stakeholders to visualize trends and seasonality in ridership.
+    - Access the dashboard example [﻿here](https://lookerstudio.google.com/reporting/708e47ae-5213-45dd-913a-c3e2b343ec58)﻿. Note that a subset of the data has been queried for cost reasons so this is not indicative of real-world results but is only to demonstrate the technology capability to solve a business requirement.
 ### Technology Stack:
 - Cloud: Google Cloud Platform (GCP)
 - Infrastructure as Code (IaC): Terraform
@@ -46,11 +47,7 @@ Utilize a Business Intelligence (BI) tool such as Data Studio to design an inter
 ## Expected Outcome:
 The developed dashboard will empower stakeholders, including operations managers, marketing teams, and city planners, to make data-driven decisions to optimize bike-sharing operations, enhance user experience, and drive business growth.
 
-
-
 ## Instructions:
-
-
 ### Setting up Mage AI on Google Cloud Platform (GCP) using Terraform:
 1. **Install Terraform:**
     - Download and install Terraform from Terraform's official website.
@@ -65,22 +62,17 @@ The developed dashboard will empower stakeholders, including operations managers
 7. **Apply Terraform Changes:**
     - Run `**terraform apply**`  to apply the Terraform configuration changes and provision the resources on GCP.
 **Terraform: Resources**
-
-- [﻿Installing Terraform](https://developer.hashicorp.com/terraform/tutorials/aws-get-started/install-cli) 
-- [﻿Installing gcloud CLI](https://cloud.google.com/sdk/docs/install) 
+- [﻿Installing Terraform](https://developer.hashicorp.com/terraform/tutorials/aws-get-started/install-cli)  
+- [﻿Installing gcloud CLI](https://cloud.google.com/sdk/docs/install)  
 - [﻿Mage Terraform Templates](https://github.com/mage-ai/mage-ai-terraform-templates) 
 Additional Mage Guides
-
-- [﻿Terraform](https://docs.mage.ai/production/deploying-to-cloud/using-terraform) 
+- [﻿Terraform](https://docs.mage.ai/production/deploying-to-cloud/using-terraform)  
 - [﻿Deploying to GCP with Terraform](https://docs.mage.ai/production/deploying-to-cloud/gcp/setup) 
-
-
 ### **Set up Google Big Query:**
 1. Set up Google BigQuery and partition the raw schema table by month which means that in DBT you will have to consider the partitioning in the dbt model for the staging table.
-   ![image](https://github.com/Ndu3000/bike-sharing-dashboard/assets/9050323/f865328d-2a3b-418d-a357-74e6cd577876)
-2. A query for the partitioned table looks something this
-   `**SELECT * FROM `mage-project-74715.raw_divvy.bike_rides-2024-04-20T07_48_42_restore` WHERE TIMESTAMP_TRUNC(_PARTITIONTIME, MONTH) = TIMESTAMP("2024-04-01") LIMIT 1000;**`
-4. The final data warehouse should look like the data model diagram at the bottom of this README file after setting up a single normal form normalised star schema for our data warehouse as this data is not too complex. The normalisation and partitioning is still required for the efficient querying of this large data set of daily bike rides since the year 2013 (over 2 million records).
+2. A query for the partitioned table looks something this:
+`SELECT * FROM  mage-project-74715.raw_divvy.bike_rides-2024-04-20T07_48_42_restore WHERE TIMESTAMP_TRUNC(_PARTITIONTIME, MONTH) = TIMESTAMP("2024-04-01") LIMIT 1000;` 
+3. The final data warehouse should look like the data model diagram at the bottom of this README file after setting up a single normal form normalised star schema for our data warehouse as this data is not too complex. The normalisation and partitioning is still required for the efficient querying of this large data set of daily bike rides since the year 2013 (over 2 million records).
 ### Configuring Mage AI Environment:
 1. **Access Mage AI Console:**
     - Once the Terraform setup is complete, access the Mage AI console using the provided URL.
@@ -107,7 +99,7 @@ Additional Mage Guides
     - Navigate to the DBT section in the Mage AI console.
 2. **Create DBT Project:**
     - Create a new DBT project within Mage AI. The initial set up of the DBT project structure in Mage should look like this.
-![image](https://github.com/Ndu3000/bike-sharing-dashboard/assets/9050323/4976737e-7938-45f6-ad13-cd870a531a40)
+
 3. **Define DBT Configuration:**
     - Define your DBT project configuration, including connections to your data sources and targets.
 4. **Create DBT Models:**
@@ -116,18 +108,14 @@ Additional Mage Guides
     - Run DBT jobs to execute your defined models and populate your target data warehouse.
 6. **Verify Results:**
     - Verify the results of your DBT jobs to ensure that your models are functioning as expected and that data is correctly transformed and loaded into your target data warehouse.
-  
-
 By following these steps, you should be able to set up a raw pipeline in Mage AI to fetch data from the City of Chicago API and then set up a DBT staging pipeline to transform and load the data into your target data warehouse. Ensure to replace placeholders with actual values and customize the setup according to your specific requirements and environment.
-
-
 
 
 <!-- eraser-additional-content -->
 ## Diagrams
 <!-- eraser-additional-files -->
-<a href="/README-Data Warehouse Solution Architecture-1.eraserdiagram" data-element-id="K32Ncu7iXJWadXUpAxd52"><img src="/.eraser/GfKGAlQJF4hlHKT0Xz81___5kM4ZM4iKkdtYlmhik2Qk756wmk1___---diagram----6cdf8b05a564a99ed284c4e1eacc48eb-Data-Warehouse-Solution-Architecture.png" alt="" data-element-id="K32Ncu7iXJWadXUpAxd52" /></a>
-<a href="/README-Rides Data Model-2.eraserdiagram" data-element-id="g1hSsS9Vcc_C8tmEawhkX"><img src="/.eraser/GfKGAlQJF4hlHKT0Xz81___5kM4ZM4iKkdtYlmhik2Qk756wmk1___---diagram----bc16160461f45189520128d9d8c95566-Rides-Data-Model.png" alt="" data-element-id="g1hSsS9Vcc_C8tmEawhkX" /></a>
+<a href="/README-Data Warehouse Solution Architecture-1.eraserdiagram" data-element-id="K32Ncu7iXJWadXUpAxd52"><img src="/.eraser/GfKGAlQJF4hlHKT0Xz81___5kM4ZM4iKkdtYlmhik2Qk756wmk1___---diagram----3c1b68cf72162f77c40110b6d7d0b1e7-Data-Warehouse-Solution-Architecture.png" alt="" data-element-id="K32Ncu7iXJWadXUpAxd52" /></a>
+<a href="/README-Rides Data Model-2.eraserdiagram" data-element-id="g1hSsS9Vcc_C8tmEawhkX"><img src="/.eraser/GfKGAlQJF4hlHKT0Xz81___5kM4ZM4iKkdtYlmhik2Qk756wmk1___---diagram----31d4d9029b6cc0b04345873e36c6dcd5-Rides-Data-Model.png" alt="" data-element-id="g1hSsS9Vcc_C8tmEawhkX" /></a>
 <!-- end-eraser-additional-files -->
 <!-- end-eraser-additional-content -->
 <!--- Eraser file: https://app.eraser.io/workspace/GfKGAlQJF4hlHKT0Xz81 --->
