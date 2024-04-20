@@ -71,7 +71,8 @@ Additional Mage Guides
 ### **Set up Google Big Query:**
 1. Set up Google BigQuery and partition the raw schema table by month which means that in DBT you will have to consider the partitioning in the dbt model for the staging table.
 2. A query for the partitioned table looks something this:
-`SELECT * FROM  mage-project-74715.raw_divvy.bike_rides-2024-04-20T07_48_42_restore WHERE TIMESTAMP_TRUNC(_PARTITIONTIME, MONTH) = TIMESTAMP("2024-04-01") LIMIT 1000;` 
+`SELECT * FROM  mage-project-74715.raw_divvy.bike_rides-2024-04-20T07_48_42_restore WHERE TIMESTAMP_TRUNC(_PARTITIONTIME, MONTH) = TIMESTAMP("2024-04-01") LIMIT 1000;`
+![image](https://github.com/Ndu3000/bike-sharing-dashboard/assets/9050323/f6ad6af4-04aa-4e0a-858a-208a838d28fd)
 3. The final data warehouse should look like the data model diagram at the bottom of this README file after setting up a single normal form normalised star schema for our data warehouse as this data is not too complex. The normalisation and partitioning is still required for the efficient querying of this large data set of daily bike rides since the year 2013 (over 2 million records).
 ### Configuring Mage AI Environment:
 1. **Access Mage AI Console:**
@@ -99,6 +100,7 @@ Additional Mage Guides
     - Navigate to the DBT section in the Mage AI console.
 2. **Create DBT Project:**
     - Create a new DBT project within Mage AI. The initial set up of the DBT project structure in Mage should look like this.
+![image](https://github.com/Ndu3000/bike-sharing-dashboard/assets/9050323/f525e25d-c017-4acd-9291-01e92777f508)
 
 3. **Define DBT Configuration:**
     - Define your DBT project configuration, including connections to your data sources and targets.
