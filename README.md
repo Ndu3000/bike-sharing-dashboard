@@ -70,10 +70,7 @@ Additional Mage Guides
 - [﻿Deploying to GCP with Terraform](https://docs.mage.ai/production/deploying-to-cloud/gcp/setup) 
 ### **Set up Google Big Query:**
 1. Set up Google BigQuery and partition the raw schema table by month which means that in DBT you will have to consider the partitioning in the dbt model for the staging table.
-2. A query for the partitioned table looks something this:
-`SELECT * FROM  mage-project-74715.raw_divvy.bike_rides-2024-04-20T07_48_42_restore WHERE TIMESTAMP_TRUNC(_PARTITIONTIME, MONTH) = TIMESTAMP("2024-04-01") LIMIT 1000;`
-![image](https://github.com/Ndu3000/bike-sharing-dashboard/assets/9050323/f6ad6af4-04aa-4e0a-858a-208a838d28fd)
-3. The final data warehouse should look like the data model diagram at the bottom of this README file after setting up a single normal form normalised star schema for our data warehouse as this data is not too complex. The normalisation and partitioning is still required for the efficient querying of this large data set of daily bike rides since the year 2013 (over 2 million records).
+2. The final data warehouse should resemble the data model diagram at the bottom of this README file after setting up a single normal form normalised star schema for our data warehouse as this data is not too complex. The normalisation and partitioning is still required for the efficient querying of this large data set of daily bike rides since the year 2013 (over 2 million records).
 ### Configuring Mage AI Environment:
 1. **Access Mage AI Console:**
     - Once the Terraform setup is complete, access the Mage AI console using the provided URL.
@@ -90,11 +87,14 @@ Additional Mage Guides
 3. **Set up Data Source:**
     - Configure a data loader first in the pipeline to fetch data from the City of Chicago API mentioned above.
 4. **Define Transformation Rules:**
-    - Then define any necessary transformation rules or filters to process the raw data from the API.
+    - Then define any necessary transformation rules or filters to process the raw data from the API. In this case I specified specific data types and derived new columns from existing columns e.g. day, month, and year was derived from the the datetime timestamp in the original source data. Additionally, unnecessary fields were dropped. The preprocessing step is useful before doing further transformations in dbt.
 5. **Schedule Pipeline Execution:**
     - Then set up a schedule for the pipeline to execute periodically to fetch updated data from the API.
 6. **Run Pipeline and set up trigger schedule:**
-    - Execute the pipeline to fetch data from the City of Chicago API and store it Google Big Query.
+    - Execute the pipeline to fetch data from the City of Chicago API and store it Google Big Query (the data ware house environment we set up in the previous step above.
+7. Once the automated pipeline in Mage is running, you can query for the partitioned table raw_divvy.bike_rides table resulting from this pipeline like this:
+`SELECT * FROM  mage-project-74715.raw_divvy.bike_rides WHERE TIMESTAMP_TRUNC(_PARTITIONTIME, MONTH) = TIMESTAMP("2024-04-01") LIMIT 1000;`
+![image](https://github.com/Ndu3000/bike-sharing-dashboard/assets/9050323/f6ad6af4-04aa-4e0a-858a-208a838d28fd)
 ### Setting up DBT Staging Pipeline in Mage AI:
 1. **Access DBT Environment:**
     - Navigate to the DBT section in the Mage AI console.
